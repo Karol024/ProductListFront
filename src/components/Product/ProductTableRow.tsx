@@ -1,8 +1,8 @@
 import React, {MouseEvent} from "react";
 import {ProductEntity} from 'types';
 import {Link} from "react-router-dom";
-
-
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import {Item} from "../commons/item";
 
 interface Props {
     product: ProductEntity;
@@ -34,18 +34,18 @@ export const ProductTableRow = (props: Props) => {
         return (
             <tr>
                 <Link className="link" to={`/product/${props.product.id}`}>
-
+                        <Item>
                         {props.product.name}
-
+                        </Item>
                     </Link>
 
                 <td className="td">
-                     {props.product.count}
+                    <Item> {props.product.count} </Item>
                 </td>
 
                 <td>
                     <a  href="" onClick={deleteProduct}>
-
+                        <DeleteForeverIcon/>
                     </a>
                 </td>
             </tr>

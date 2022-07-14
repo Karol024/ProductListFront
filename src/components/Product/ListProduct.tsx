@@ -21,7 +21,7 @@ export const ListProduct = () => {
 
 
   if (productsList=== null) {
-      return <CircularProgress/>
+      return <p>wczytywanie...</p>
   }
 
 return <>

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {ProductEntity} from 'types'
 import {ProductTable} from "./ProductTable";
+import {CircularProgress} from "@mui/material";
 
 
 export const ListProduct = () => {
@@ -20,7 +21,7 @@ export const ListProduct = () => {
 
 
   if (productsList=== null) {
-      return <p>wczytywanie...</p>
+      return <CircularProgress/>
   }
 
 return <>

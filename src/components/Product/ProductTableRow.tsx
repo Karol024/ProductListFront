@@ -3,6 +3,7 @@ import {ProductEntity} from 'types';
 import {Link} from "react-router-dom";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import {Item} from "../commons/item";
+import {apiUrl} from "../../config/api";
 
 interface Props {
     product: ProductEntity;
@@ -19,7 +20,7 @@ export const ProductTableRow = (props: Props) => {
                 return;
             }
 
-            const res = await fetch(`http://localhost:3001/product/${props.product.id}`, {
+            const res = await fetch(`${apiUrl}/product/${props.product.id}`, {
                 method: 'DELETE',
             });
 

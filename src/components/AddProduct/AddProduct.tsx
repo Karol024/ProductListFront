@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import {Item2} from "../commons/item2";
 import CircularProgress from '@mui/material/CircularProgress';
 import {Item} from "../commons/item";
+import {apiUrl} from "../../config/api";
 
 export const AddProduct = () => {
 
@@ -30,7 +31,7 @@ export const AddProduct = () => {
 
     try {
 
-    const res = await fetch(`http://localhost:3001/product`,{
+    const res = await fetch(`${apiUrl}/product`,{
        method: 'POST',
       headers: {
          'Content-Type': 'application/json',
